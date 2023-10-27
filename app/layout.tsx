@@ -5,10 +5,11 @@ import Nav from './nav';
 import Toast from './toast';
 import { Suspense } from 'react';
 
+
 export const metadata = {
-  title: 'Next.js 13 + PlanetScale + NextAuth + Tailwind CSS',
+  title: 'Blockfam ',
   description:
-    'A user admin dashboard configured with Next.js, PlanetScale, NextAuth, Tailwind CSS, TypeScript, ESLint, and Prettier.'
+    'An admin dashboard built to streamline the loan underwriting and verification process with a smart contract.'
 };
 
 export default async function RootLayout({
