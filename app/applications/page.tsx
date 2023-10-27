@@ -22,7 +22,8 @@ export default async function ApplicationsPage({
 }) {
     const search = searchParams.q ?? '';
     const loanApplications = await queryBuilder
-        .selectFrom<LoanApplication>('loan_applications')
+        
+        .selectFrom('loan_applications')
         .select([
             'application_id',
             'applicant_name',
@@ -33,7 +34,7 @@ export default async function ApplicationsPage({
             'employment_status'
         ])
         .where('applicant_name', 'like', `%${search}%`)
-        .execute() as LoanApplication[];
+        .execute();
 
     return (
         <main className="p-4 md:p-10 mx-auto max-w-7xl">
