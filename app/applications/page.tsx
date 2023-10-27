@@ -1,4 +1,3 @@
-
 import { Card, Title, Text } from '@tremor/react';
 import { queryBuilder } from '../../lib/planetscale';
 import Search from '../search';
@@ -12,6 +11,8 @@ interface LoanApplication {
     applicant_id_number: string;
     applicant_phone_number: string;
     applicant_email: string;
+    residence_address: string;
+    employment_status: string;
 }
 
 export default async function ApplicationsPage({
@@ -20,8 +21,8 @@ export default async function ApplicationsPage({
     searchParams: { q: string };
 }) {
     const search = searchParams.q ?? '';
-    const loanApplications: LoanApplicationsTable[] = await queryBuilder
-        .selectFrom<LoanApplicationsTable>('loan_applications')
+    const loanApplications = await queryBuilder
+        .selectFrom<LoanApplication>('loan_applications')
         .select([
             'application_id',
             'applicant_name',
