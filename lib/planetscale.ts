@@ -11,7 +11,7 @@ interface User {
 
 interface Database {
   users: User;
-  loan_applications: Any
+  loan_applications: number;
   // https://github.com/nextauthjs/next-auth/issues/4922
 }
 
