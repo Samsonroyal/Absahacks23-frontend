@@ -33,7 +33,7 @@ export default function Navbar({ user }: { user: any }) {
    height="32"
    viewBox="0 0 32 32"
    fill="none"
-   class="text-gray-100"
+   className="text-gray-100"
    xmlns="http://www.w3.org/2000/svg"
 >
   <rect
